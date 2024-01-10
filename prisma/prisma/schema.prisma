@@ -1,0 +1,21 @@
+datasource db {
+    provider = "mongodb"
+    url      = env("DATABASE_URL")
+}
+
+generator client {
+    provider = "prisma-client-js"
+    output   = "@prisma/client"
+}
+
+model User {
+    
+    faculty_id     String   @id @default(cuid()) @map("_id")
+    name     String   @unique
+    gender      String?
+    designation      String?
+    date_of_joining     DateTime
+    aicte_id      String?
+    state      String?
+    
+}
