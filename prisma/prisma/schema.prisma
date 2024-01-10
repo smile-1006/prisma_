@@ -7,15 +7,15 @@ generator client {
     provider = "prisma-client-js"
     output   = "@prisma/client"
 }
-
-model User {
+//creating a prisma ORM model
+model institue {
     
     faculty_id     String   @id @default(cuid()) @map("_id")
-    name     String   @unique
-    gender      String?
-    designation      String?
+    name     String  
+    gender      String
+    designation      String
     date_of_joining     DateTime
-    aicte_id      String?
+    aicte_id      String   @unique
     state      String?
     
 }
