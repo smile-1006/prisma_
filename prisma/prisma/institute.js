@@ -17,3 +17,10 @@ export const createInstitute = async (facultyID,name,gender,designation,date_of_
     return institute;
     
 } 
+
+export const getAllinstitute = async () => {
+    const institute = await prisma.institute.findMany({
+        facultyID: facultyID
+    })
+    return institute;
+}
