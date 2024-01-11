@@ -24,3 +24,14 @@ export const getAllinstitute = async () => {
     })
     return institute;
 }
+
+export const deleteinstitute = async () => {
+
+    await prisma.institute.delete({
+        where: {
+            facultyID: facultyID
+        }
+    })
+    
+    return institute;
+}
