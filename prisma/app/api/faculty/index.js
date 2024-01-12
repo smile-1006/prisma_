@@ -12,6 +12,10 @@ export default async function handler(req, res) {
             
                 return res.status(201).json(new_faculty)
             }
+            case 'GET':
+                const allfaculty = await getAllinstitute()
+            
+                return res.status(200).json(allfaculty)
             
             
         }
