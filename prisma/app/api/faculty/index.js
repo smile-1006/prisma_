@@ -1,4 +1,4 @@
-import { createInstitute } from "../../../prisma/institute";
+import { createInstitute, deleteinstitute } from "../../../prisma/institute";
 
 export default async function handler(req, res) {
     
@@ -17,7 +17,12 @@ export default async function handler(req, res) {
             
                 return res.status(200).json(allfaculty)
             
-            
+                case 'DELETE':
+                    const { facultyID } = req.query;
+                    await deleteinstitute(facultyID)
+                    return res.status(200).json({msg: 'faculty resigned from institute'})
+                default:
+                    res.status(405).end(`Method ${method} Not Allowed`)
         }
     }catch(error){
         console.log(error);
