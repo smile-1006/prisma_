@@ -1,11 +1,11 @@
-import { createInstitute, deleteinstitute } from "../../../prisma/institute";
+import { createInstitute, deleteinstitute, getAllinstitute } from "../../../prisma/institute";
 
 export default async function handler(req, res) {
     
     try{
-        const { method } = req
         
-        switch (method) {
+        
+        switch (req.method) {
             case 'POST':{
                 const { facultyID,name,gender,designation,date_of_joining,aicte_id,state} = req.body;
                 const new_faculty = await createInstitute(facultyID,name,gender,designation,date_of_joining,aicte_id,state)

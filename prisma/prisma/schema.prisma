@@ -14,7 +14,7 @@ model institue {
     name     String  
     gender      String
     designation      String
-    date_of_joining     DateTime
+    date_of_joining    String
     aicte_id      String   @unique
     state      String?
     
