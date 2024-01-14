@@ -1,5 +1,6 @@
 import { createInstitute, deleteinstitute, getAllinstitute } from "../../../prisma/institute";
 
+//request handler
 export default async function handler(req, res) {
     
     try{
