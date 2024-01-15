@@ -4,8 +4,6 @@ import { createInstitute, deleteinstitute, getAllinstitute } from "@/prisma/facu
 export default async function handler(req, res) {
     
     try{
-        
-        
         switch (req.method) {
             case 'POST':{
                 const { facultyID,name,gender,designation,date_of_joining,aicte_id,state} = req.body;
@@ -18,12 +16,12 @@ export default async function handler(req, res) {
             
                 return res.status(200).json(allfaculty)
             
-                case 'DELETE':
-                    const { facultyID } = req.query;
-                    await deleteinstitute(facultyID)
-                    return res.status(200).json({msg: 'faculty resigned from institute'})
-                default:
-                    res.status(405).end(`Method ${method} Not Allowed`)
+            case 'DELETE':
+                const { facultyID } = req.query;
+                await deleteinstitute(facultyID)
+                return res.status(200).json({msg: 'faculty resigned from institute'})
+            default:
+                res.status(405).end(`Method ${method} Not Allowed`)
         }
     }catch(error){
         console.log(error);
