@@ -1,6 +1,15 @@
 import React from 'react'
+import {useState} from "react"
 
 function addfaculty() {
+
+  const [faculty_id, setfaculty_id] = useState("");
+  const [name, setname] = useState("");
+  const [gender, setgender] = useState("");
+  const [designation, setdesignation] = useState("");
+  const [date_of_joining, setdate_of_joining] = useState("");
+  const [aicte_id, setaicte_id] = useState("");
+  const [state, setstate] = useState("");
   return (
     <>
       <div>
@@ -26,13 +35,13 @@ function addfaculty() {
         <select id="gender" name="gender" className="mt-1 p-2 w-full border rounded">
           <option value="male">Male</option>
           <option value="female">Female</option>
-          {/* Add more options as needed */}
+          <option value="other">Other</option>
         </select>
       </div>
 
       <div className="mb-4">
         <label htmlFor="designation" className="block text-sm font-medium text-gray-600">
-          Gender
+        designation
         </label>
         <select id="designation" name="designation" className="mt-1 p-2 w-full border rounded">
           
@@ -41,7 +50,7 @@ function addfaculty() {
 
       <div className="mb-4">
         <label htmlFor="date_of_joining" className="block text-sm font-medium text-gray-600">
-          Gender
+        date_of_joining
         </label>
         <select id="date_of_joining" name="date_of_joining" className="mt-1 p-2 w-full border rounded">
           
@@ -50,7 +59,7 @@ function addfaculty() {
 
       <div className="mb-4">
         <label htmlFor="aicte_id" className="block text-sm font-medium text-gray-600">
-          Gender
+        aicte_id
         </label>
         <select id="aicte_id" name="aicte_id" className="mt-1 p-2 w-full border rounded">
           
@@ -59,15 +68,14 @@ function addfaculty() {
 
       <div className="mb-4">
         <label htmlFor="state" className="block text-sm font-medium text-gray-600">
-          Gender
+        state
         </label>
         <select id="state" name="state" className="mt-1 p-2 w-full border rounded">
           
         </select>
       </div>
 
-      {/* Repeat similar structure for other fields: designation, date_of_joining, aicte_id, state */}
-
+      
       <div className="mt-6">
         <button type="submit" className="bg-blue-500 text-white p-2 rounded">
           Submit
