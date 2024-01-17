@@ -18,14 +18,14 @@ function addfaculty() {
         <label htmlFor="faculty_id" className="block text-sm font-medium text-gray-600">
           Faculty ID
         </label>
-        <input type="text" id="faculty_id" name="faculty_id" className="mt-1 p-2 w-full border rounded" />
+        <input onChange={(e)=> setfaculty_id(e.target.value)} type="text" id="faculty_id" name="faculty_id" className="mt-1 p-2 w-full border rounded" />
       </div>
 
       <div className="mb-4">
         <label htmlFor="name" className="block text-sm font-medium text-gray-600">
           Name
         </label>
-        <input type="text" id="name" name="name" className="mt-1 p-2 w-full border rounded" />
+        <input onChange={(e)=> setname(e.target.value)} type="text" id="name" name="name" className="mt-1 p-2 w-full border rounded" />
       </div>
 
       <div className="mb-4">
@@ -36,6 +36,7 @@ function addfaculty() {
           <option value="male">Male</option>
           <option value="female">Female</option>
           <option value="other">Other</option>
+          <input onChange={(e)=> setgender(e.target.value)} type="text" />
         </select>
       </div>
 
@@ -43,36 +44,32 @@ function addfaculty() {
         <label htmlFor="designation" className="block text-sm font-medium text-gray-600">
         designation
         </label>
-        <select id="designation" name="designation" className="mt-1 p-2 w-full border rounded">
-          
-        </select>
+        <input onChange={(e)=> setdesignation(e.target.value)} type="text" id="designation" name="designation" className="mt-1 p-2 w-full border rounded" />
+
       </div>
 
       <div className="mb-4">
         <label htmlFor="date_of_joining" className="block text-sm font-medium text-gray-600">
         date_of_joining
         </label>
-        <select id="date_of_joining" name="date_of_joining" className="mt-1 p-2 w-full border rounded">
-          
-        </select>
+        <input onChange={(e)=> setdate_of_joining(e.target.value)} type="text" id="date_of_joining" name="date_of_joining" className="mt-1 p-2 w-full border rounded" />
+
       </div>
 
       <div className="mb-4">
         <label htmlFor="aicte_id" className="block text-sm font-medium text-gray-600">
         aicte_id
         </label>
-        <select id="aicte_id" name="aicte_id" className="mt-1 p-2 w-full border rounded">
-          
-        </select>
+        <input onChange={(e)=> setaicte_id(e.target.value)} type="text" id="aicte_id" name="aicte_id" className="mt-1 p-2 w-full border rounded" />
+
       </div>
 
       <div className="mb-4">
         <label htmlFor="state" className="block text-sm font-medium text-gray-600">
         state
         </label>
-        <select id="state" name="state" className="mt-1 p-2 w-full border rounded">
-          
-        </select>
+        <input onChange={(e)=> setstate(e.target.value)} type="text" id="state" name="state" className="mt-1 p-2 w-full border rounded" />
+
       </div>
 
       
