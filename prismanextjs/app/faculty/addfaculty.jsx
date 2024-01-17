@@ -1,7 +1,13 @@
+import { useAddFaculty } from '@/hooks/useaddfaculty';
+import { useRouter } from 'next/router';
 import React from 'react'
 import {useState} from "react"
 
-function addfaculty() {
+const addfaculty= () => {
+
+  const addfaculty = useAddFaculty('api/faculty');
+
+  const router = useRouter();
 
   const [faculty_id, setfaculty_id] = useState("");
   const [name, setname] = useState("");
@@ -10,10 +16,28 @@ function addfaculty() {
   const [date_of_joining, setdate_of_joining] = useState("");
   const [aicte_id, setaicte_id] = useState("");
   const [state, setstate] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const faculty = {
+      faculty_id,
+      name,
+      gender,
+      designation,
+      date_of_joining,
+      aicte_id,
+      state
+    };
+    await addfaculty(faculty)
+    router.push('/faculty')
+    console.log('submitting form')
+  } 
+
+
   return (
     <>
       <div>
-      <form className="max-w-md mx-auto my-8 p-8 border rounded shadow-md">
+      <form className="max-w-md mx-auto my-8 p-8 border rounded shadow-md" onSubmit={handleSubmit}>
       <div className="mb-4">
         <label htmlFor="faculty_id" className="block text-sm font-medium text-gray-600">
           Faculty ID

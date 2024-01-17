@@ -8,7 +8,14 @@ export const useAddFaculty = (path) =>{
     const {mutate} = useSWR(path);
 
     const addfaculty = async (data) =>{
-        const res = await axios.post(path,{data});
+        const res = await fetch(path,{
+            method: 'POST',
+            headers: {
+                'content-Type':'application/json',
+
+            },
+            body: JSON.stringify(data),
+        });
 
         if (!res.ok){
             throw new Error('Something went wrong while adding the faculty');
