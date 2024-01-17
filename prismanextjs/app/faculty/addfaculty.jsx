@@ -30,6 +30,42 @@ function addfaculty() {
         </select>
       </div>
 
+      <div className="mb-4">
+        <label htmlFor="designation" className="block text-sm font-medium text-gray-600">
+          Gender
+        </label>
+        <select id="designation" name="designation" className="mt-1 p-2 w-full border rounded">
+          
+        </select>
+      </div>
+
+      <div className="mb-4">
+        <label htmlFor="date_of_joining" className="block text-sm font-medium text-gray-600">
+          Gender
+        </label>
+        <select id="date_of_joining" name="date_of_joining" className="mt-1 p-2 w-full border rounded">
+          
+        </select>
+      </div>
+
+      <div className="mb-4">
+        <label htmlFor="aicte_id" className="block text-sm font-medium text-gray-600">
+          Gender
+        </label>
+        <select id="aicte_id" name="aicte_id" className="mt-1 p-2 w-full border rounded">
+          
+        </select>
+      </div>
+
+      <div className="mb-4">
+        <label htmlFor="state" className="block text-sm font-medium text-gray-600">
+          Gender
+        </label>
+        <select id="state" name="state" className="mt-1 p-2 w-full border rounded">
+          
+        </select>
+      </div>
+
       {/* Repeat similar structure for other fields: designation, date_of_joining, aicte_id, state */}
 
       <div className="mt-6">
