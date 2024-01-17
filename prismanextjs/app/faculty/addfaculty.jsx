@@ -36,6 +36,8 @@ const addfaculty= () => {
 
   return (
     <>
+      <h1 className='text-4xl mt-3 p-4 text-center font-serif'>Add Faculty</h1>
+
       <div>
       <form className="max-w-md mx-auto my-8 p-8 border rounded shadow-md" onSubmit={handleSubmit}>
       <div className="mb-4">
