@@ -1,4 +1,17 @@
-const {PrismaClient} = require('@prisma/client')
-const prisma = new PrismaClient()
+const cookieParser = require('cookie-parser')
+const express = require('express')
+const app = express()
+require('dotenv').config()
 
-module.exports = prisma
+//regular middleware
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
+
+//cookie middleware
+app.use(cookieParser())
+
+app.get('/', (req, res) => {
+    res.send('Hello World!')
+})
+
+app.listen(3000, () => console.log('Server ready'))
